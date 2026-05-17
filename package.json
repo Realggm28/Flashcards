@@ -1,0 +1,27 @@
+{
+  "name": "ai-flashcards-app",
+  "version": "1.0.0",
+  "description": "Upload a study guide and automatically generate flashcards with an OpenAI-compatible AI endpoint.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.3",
+    "mammoth": "^1.8.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1"
+  },
+  "keywords": [
+    "flashcards",
+    "study",
+    "ai",
+    "ollama",
+    "openai-compatible"
+  ],
+  "license": "MIT"
+}
