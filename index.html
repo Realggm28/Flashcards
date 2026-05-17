@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Flashcards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Study Flashcards</h1>
+  <p class="subtitle">
+    Upload your own flashcards, practice them, save your favorites, export your deck,
+    and keep dark mode on after reloading.
+  </p>
+
+  <div class="top-bar">
+    <button class="dark-toggle" id="darkModeToggle">🌙 Toggle Dark Mode</button>
+    <button class="export-btn" id="downloadDeckBtn">⬇️ Save / Download Deck</button>
+    <button class="export-btn" id="downloadSavedBtn">⭐ Download Saved Cards</button>
+    <button class="reset-btn" id="resetProgressBtn">Reset Progress</button>
+  </div>
+
+  <div class="import-box">
+    <h2>Upload or Paste Flashcards</h2>
+    <p class="small-note">
+      Use this format: <strong>question | answer</strong>. Put each flashcard on a new line.
+    </p>
+
+    <textarea id="flashcardInput" placeholder="Example:
+What is inertia? | Inertia is an object’s resistance to a change in motion.
+What is friction? | Friction is a force that opposes motion."></textarea>
+
+    <br />
+
+    <button class="load-btn" id="loadTextBtn">Create Flashcards From Text</button>
+
+    <label for="fileUpload" class="file-label">Upload Deck File</label>
+    <input type="file" id="fileUpload" accept=".txt,.json" />
+
+    <button class="sample-btn" id="sampleDeckBtn">Load Sample Forces Deck</button>
+  </div>
+
+  <main class="card-container" id="cardContainer">
+    <div class="flashcard" id="flashcard">Loading...</div>
+
+    <div class="controls">
+      <button class="flip-btn" id="flipBtn">Flip</button>
+      <button class="know-btn" id="knowBtn">I Know It</button>
+      <button class="practice-btn" id="practiceBtn">Need Practice</button>
+      <button class="saved-btn" id="saveCardBtn">⭐ Save Card</button>
+      <button class="next-btn" id="nextBtn">Next</button>
+    </div>
+
+    <div class="progress" id="progress"></div>
+  </main>
+
+  <section class="results" id="results">
+    <div class="result-actions">
+      <button class="retry-btn" id="practiceNeedsHelpBtn">Practice Need Help Cards</button>
+      <button class="reset-btn" id="startOverBtn">Start Over With Full Deck</button>
+    </div>
+
+    <div class="pile">
+      <h2>✅ Cards You Know</h2>
+      <ul id="knownList"></ul>
+    </div>
+
+    <div class="pile">
+      <h2>📚 Need More Practice</h2>
+      <ul id="practiceList"></ul>
+    </div>
+
+    <div class="pile">
+      <h2>⭐ Saved Cards</h2>
+      <ul id="savedList"></ul>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

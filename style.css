@@ -1,0 +1,230 @@
+:root {
+  --bg: #eef2f7;
+  --text: #222;
+  --card: #ffffff;
+  --primary: #1d3557;
+  --secondary: #457b9d;
+  --good: #2a9d8f;
+  --bad: #e63946;
+  --shadow: rgba(0, 0, 0, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+h1 {
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.top-bar,
+.import-box {
+  background: var(--card);
+  max-width: 850px;
+  margin: 18px auto;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+button,
+.file-label {
+  padding: 12px 18px;
+  margin: 8px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+}
+
+button:hover,
+.file-label:hover {
+  opacity: 0.9;
+}
+
+.file-label {
+  background: #6c757d;
+  color: white;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+textarea {
+  width: 90%;
+  max-width: 760px;
+  min-height: 160px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #aaa;
+  font-size: 15px;
+  resize: vertical;
+}
+
+.dark-toggle {
+  background: #222;
+  color: white;
+}
+
+.load-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.export-btn {
+  background: #8338ec;
+  color: white;
+}
+
+.sample-btn {
+  background: #f4a261;
+  color: white;
+}
+
+.card-container {
+  max-width: 750px;
+  margin: 20px auto;
+}
+
+.flashcard {
+  background: var(--card);
+  min-height: 320px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  font-size: 28px;
+  box-shadow: 0 6px 18px var(--shadow);
+  cursor: pointer;
+  transition: 0.3s;
+  user-select: none;
+  white-space: normal;
+}
+
+.flashcard:hover {
+  transform: scale(1.01);
+}
+
+.controls {
+  margin-top: 25px;
+}
+
+.flip-btn {
+  background: var(--secondary);
+  color: white;
+}
+
+.know-btn {
+  background: var(--good);
+  color: white;
+}
+
+.practice-btn {
+  background: var(--bad);
+  color: white;
+}
+
+.next-btn {
+  background: var(--primary);
+  color: white;
+}
+
+.saved-btn {
+  background: #ffb703;
+  color: #111;
+}
+
+.retry-btn {
+  background: #fb8500;
+  color: white;
+}
+
+.reset-btn {
+  background: #343a40;
+  color: white;
+}
+
+.progress {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.results {
+  display: none;
+}
+
+.result-actions {
+  text-align: center;
+}
+
+.pile {
+  background: var(--card);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  max-width: 700px;
+  text-align: left;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+li {
+  margin: 10px 0;
+}
+
+.small-note {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: white;
+  --card: #1f1f1f;
+  --primary: #90caf9;
+  --secondary: #1565c0;
+  --shadow: rgba(255, 255, 255, 0.08);
+}
+
+body.dark textarea {
+  background: #151515;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark .dark-toggle {
+  background: #90caf9;
+  color: #111;
+}
+
+@media (max-width: 600px) {
+  .flashcard {
+    font-size: 22px;
+    min-height: 260px;
+  }
+
+  button,
+  .file-label {
+    width: 90%;
+    max-width: 320px;
+  }
+}
